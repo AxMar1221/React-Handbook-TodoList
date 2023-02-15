@@ -6,6 +6,8 @@ function WelcomeMessage() {
 }
 
 function App() {
+  const message = 'Hello!';
+
   return (
     <div className="App">
       <header className="App-header">
@@ -14,6 +16,11 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <WelcomeMessage />
+        <p>
+          {
+            message === 'Hello!' ? 'The message was "Hello!"' : message
+          }
+        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
