@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { Counter } from './counter';
+import { CounterT } from './counterT';
 
-function WelcomeMessage() {
-  return <p>Welcome!</p>
+function WelcomeMessage({ children }) {
+  return <h1>{ children }</h1>
 }
 
 function App() {
@@ -16,8 +17,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <WelcomeMessage />
+        <WelcomeMessage> Here is some message </WelcomeMessage>
         <Counter />
+        <CounterT />
         <p>
           {
             message === 'Hello!' ? 'The message was "Hello!"' : message
